@@ -1,0 +1,104 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #101410;
+  color: #f4f7f4;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 32px 20px;
+}
+
+header {
+  margin-bottom: 28px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+  font-size: 34px;
+}
+
+header h1 span {
+  color: #00e5a8;
+}
+
+header p,
+aside p {
+  color: #b8c2ba;
+}
+
+.workout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  gap: 24px;
+}
+
+.camera {
+  position: relative;
+  overflow: hidden;
+  background: #202720;
+  border: 1px solid #354137;
+  border-radius: 16px;
+  min-height: 300px;
+}
+
+.camera video {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.camera canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+  pointer-events: none;
+}
+
+.status {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 9px 12px;
+  background: #17241e;
+  border-radius: 8px;
+  color: #00e5a8;
+  font-size: 14px;
+}
+
+aside {
+  padding: 22px;
+  background: #1a211b;
+  border: 1px solid #354137;
+  border-radius: 16px;
+}
+
+aside h2 {
+  margin-top: 0;
+}
+
+aside p {
+  padding: 10px 0;
+  border-bottom: 1px solid #303a31;
+}
+
+small {
+  color: #9ca99f;
+  line-height: 1.5;
+}
+
+@media (max-width: 750px) {
+  .workout {
+    grid-template-columns: 1fr;
+  }
+}
